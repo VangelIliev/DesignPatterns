@@ -1,3 +1,3 @@
 ﻿using DesignPatterns.Creational;
+using System.Text;
 
-var singleton = Singleton.GetInstance();

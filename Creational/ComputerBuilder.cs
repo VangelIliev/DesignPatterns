@@ -9,8 +9,13 @@ namespace DesignPatterns.Creational
 {
     public class ComputerBuilder
 {
-    private Computer _computer = new Computer();
-    public ComputerBuilder AddCPU(string cpu)
+        private Computer _computer;
+
+        public ComputerBuilder()
+        {
+            _computer = new Computer();
+        }
+        public ComputerBuilder AddCPU(string cpu)
     {
         _computer.CPU = cpu;
         return this;

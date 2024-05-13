@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace DesignPatterns.Creational
 {
     //Used in real world applications
+    //In order to serialize you need to have empty constructor
     public static class ExtensionMethods
     {
         public static T DeepCopyJSON<T>(T input)

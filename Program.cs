@@ -2,14 +2,14 @@
 using System.Text;
 
 
-var computer = new Computer();
-computer.CPU = "12";
+var prototype = new Prototype(new Address(15, "Bratq Miladinovi 16"), "Test");
 
-var secondComputer = new Computer();
-secondComputer.CPU = "13";
+var copy = ExtensionMethods.DeepCopyJSON(prototype);
 
-secondComputer = computer;
+Console.WriteLine(prototype.Address.StreetNumber);
+Console.WriteLine(copy.Address.StreetNumber);
 
-computer.CPU = "13";
-Console.WriteLine(computer.CPU);
-Console.WriteLine(secondComputer.CPU);
+copy.Address.StreetNumber = 16;
+
+Console.WriteLine(prototype.Address.StreetNumber);
+Console.WriteLine(copy.Address.StreetNumber);

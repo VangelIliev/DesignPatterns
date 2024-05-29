@@ -1,13 +1,14 @@
 ﻿using DesignPatterns.Creational;
 using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Facade;
 using System.Text;
 
-var warrior = new Warrior(new AttackBehaviour());
-var archer = new Archer(new AttackBehaviour());
-var merchant = new Merchant(new TradeBehaviour());
-
-warrior.Interact();
-
-archer.Interact();
-
-merchant.Interact();
+var coach = new Coach();
+var players = new List<Player>()
+{
+    new("John", 10),
+    new("Vangel", 7)
+};
+var team = new Team(coach, players);
+team.PlayGame();

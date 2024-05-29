@@ -10,7 +10,7 @@ namespace DesignPatterns.Structural.Decorator
     public class CakeDecorater
     {
         private readonly ICake _cake;
-        public CakeDecorater(ICake cake)
+        public CakeDecorater( ICake cake)
         {
             _cake = cake;
         }

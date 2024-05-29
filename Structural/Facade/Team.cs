@@ -16,7 +16,8 @@ namespace DesignPatterns.Structural.Facade
             this._coach = coach;
             this._players = players;
         }
-
+        //Play game is the Facade
+        //The client doesn't know that behind the scenes players are playing and coach is coaching
         public void PlayGame()
         {
             this._coach.CoachPlayers();

@@ -1,15 +1,13 @@
 ﻿using DesignPatterns.Creational;
+using DesignPatterns.Structural.Bridge;
 using System.Text;
 
+var warrior = new Warrior(new AttackBehaviour());
+var archer = new Archer(new AttackBehaviour());
+var merchant = new Merchant(new TradeBehaviour());
 
-var prototype = new Prototype(new Address(15, "Bratq Miladinovi 16"), "Test");
+warrior.Interact();
 
-var copy = ExtensionMethods.DeepCopyJSON(prototype);
+archer.Interact();
 
-Console.WriteLine(prototype.Address.StreetNumber);
-Console.WriteLine(copy.Address.StreetNumber);
-
-copy.Address.StreetNumber = 16;
-
-Console.WriteLine(prototype.Address.StreetNumber);
-Console.WriteLine(copy.Address.StreetNumber);
+merchant.Interact();
